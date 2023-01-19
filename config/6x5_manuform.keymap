@@ -22,11 +22,11 @@
             // |    2   |  2  | f   | 6    | 4    | 1    |                    | 2    | 1     | w     | s    | n     |  a    |
 
             bindings = <
-           &kp ESC          &kp F1          &kp F2       &kp F3            &kp F4       &kp F6           &kp F7             &kp F8       &kp F9      &kp F10             &kp F11      &kp RG(B)
-           &kp TAB           &kp Q           &kp W        &kp E             &kp R        &kp T            &kp Y              &kp U        &kp I        &kp O               &kp P     &kp RS(F6)
-          &kp CAPS  &mt LEFT_GUI A  &mt LEFT_ALT S  &mt LCTRL D  &mt LEFT_SHIFT F        &kp G            &kp H  &mt RIGHT_SHIFT J  &mt RCTRL K  &mt RCTRL L  &mt RIGHT_GUI APOS  &kp LA(LS(L))
- &kp LS(LC(ENTER))           &kp Z           &kp X        &kp C             &kp V        &kp B            &kp N              &kp M    &kp COMMA      &kp DOT            &kp FSLH      &kp LC(T)
-           &kp ESC       &lt 3 TAB       &lt 3 TAB      &kp ESC       &lt 4 SPACE  &lt 4 SPACE  &lt 1 BACKSPACE    &lt 1 BACKSPACE    &lt 5 DEL  &lt 2 ENTER         &lt 2 ENTER      &lt 5 DEL
+           &kp ESC          &kp F1          &kp F2       &kp F3            &kp F4   &kp F6  &kp F7             &kp F8       &kp F9      &kp F10             &kp F11      &kp RG(B)
+           &kp TAB           &kp Q           &kp W        &kp E             &kp R    &kp T   &kp Y              &kp U        &kp I        &kp O               &kp P     &kp RS(F6)
+          &kp CAPS  &mt LEFT_GUI A  &mt LEFT_ALT S  &mt LCTRL D  &mt LEFT_SHIFT F    &kp G   &kp H  &mt RIGHT_SHIFT J  &mt RCTRL K  &mt RCTRL L  &mt RIGHT_GUI SEMI  &kp LA(LS(L))
+ &kp LS(LC(ENTER))           &kp Z           &kp X        &kp C             &kp V    &kp B   &kp N              &kp M    &kp COMMA      &kp DOT            &kp FSLH      &kp LC(T)
+           &kp ESC        &kp BSPC           &mo 3    &kp LSHFT         &kp SPACE  &kp TAB   &mo 1            &kp RET     &kp RGUI        &mo 2             &kp DEL      &kp RCTRL
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -41,11 +41,11 @@
             // |       |     |     |      |      |      |                   |      |       |       |      |       |       |
 
             bindings = <
- &ext_power EP_ON  &ext_power EP_OFF  &ext_power EP_TOG          &trans  &trans             &trans  &bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4
-           &trans   &kp LEFT_BRACKET             &kp N7          &kp N8  &kp N9  &kp RIGHT_BRACKET      &trans        &trans        &trans        &trans        &trans        &trans
-           &trans           &kp SEMI             &kp N4          &kp N5  &kp N6          &kp EQUAL      &trans        &trans        &trans        &trans        &trans        &trans
-           &trans          &kp GRAVE             &kp N1          &kp N2  &kp N3      &kp BACKSLASH      &trans        &trans        &trans        &trans        &trans        &trans
-           &trans             &trans             &trans  &kp LEFT_SHIFT  &trans             &trans      &trans        &trans        &trans        &trans        &trans        &trans
+ &ext_power EP_ON  &ext_power EP_OFF  &ext_power EP_TOG   &trans        &trans             &trans  &bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4
+           &trans   &kp LEFT_BRACKET             &kp N7   &kp N8        &kp N9  &kp RIGHT_BRACKET      &trans        &trans        &trans        &trans        &trans        &trans
+           &trans           &kp SEMI             &kp N4   &kp N5        &kp N6          &kp EQUAL      &trans        &trans        &trans        &trans        &trans        &trans
+           &trans          &kp GRAVE             &kp N1   &kp N2        &kp N3      &kp BACKSLASH      &trans        &trans        &trans        &trans        &trans        &trans
+          &kp DOT          &kp MINUS          &kp MINUS  &kp DOT  &kp NUMBER_0             &kp N0      &trans        &trans        &trans        &trans        &trans        &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -70,33 +70,13 @@
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
 
-        intellij {
+        refactor {
             bindings = <
  &trans  &trans  &trans  &trans  &trans  &trans  &trans         &trans         &trans         &trans  &trans  &kp LA(F7)
  &trans  &trans  &trans  &trans  &trans  &trans  &trans     &kp LG(F6)  &kp LA(LG(M))  &kp LA(LG(V))  &trans      &trans
  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp LA(LG(C))  &kp LA(LG(P))  &kp LA(LG(F))  &trans      &trans
  &trans  &trans  &trans  &trans  &trans  &trans  &trans         &trans  &kp LA(LG(N))         &trans  &trans      &trans
  &trans  &trans  &trans  &trans  &trans  &trans  &trans         &trans         &trans         &trans  &trans      &trans
-            >;
-        };
-
-        Navigation__4 {
-            bindings = <
- &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
- &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
- &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
- &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
- &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-            >;
-        };
-
-        vscode {
-            bindings = <
- &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
- &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
- &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
- &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
- &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
             >;
         };
     };
