@@ -10,6 +10,28 @@
 #include <dt-bindings/zmk/bt.h>
 
 / {
+    behaviors {
+		/omit-if-no-ref/ lt: behavior_layer_tap {
+			compatible = "zmk,behavior-hold-tap";
+			label = "LAYER_TAP";
+			#binding-cells = <2>;
+			flavor = "tap-preferred";
+			tapping-term-ms = <150>;
+			bindings = <&mo>, <&kp>;
+		};
+	};
+
+    behaviors {
+		/omit-if-no-ref/ mt: behavior_mod_tap {
+			compatible = "zmk,behavior-hold-tap";
+			label = "MOD_TAP";
+			#binding-cells = <2>;
+			flavor = "hold-preferred";
+			tapping-term-ms = <150>;
+			bindings = <&kp>, <&kp>;
+		};
+	};
+
     keymap {
         compatible = "zmk,keymap";
 
